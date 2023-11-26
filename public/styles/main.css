@@ -1,3 +1,21 @@
-body {
+* {
   font-family: Figtree;
+}
+
+main.homepage {
+  display: grid;
+  grid-template-columns: 300px auto auto;
+}
+
+#finishedWorkTitle {
+  text-align: center;
+}
+
+#finishedWorkList {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.finishedWorkListItems {
+  padding: 200px;
 }

@@ -1,52 +1,63 @@
 ---
 layout: "base.njk" 
 ---
-    
-<h1> Finished Work</h1>
 
-<ul>
+<main class="homepage">
 
-    {%- for post in collections.post -%}
-        {% if (loop.index <= 5) %}
-            <li>
-                <img></img>
-                <h3>{{ post.data.title }}</h3>
-            </li>
-        {% endif %}
-    {%- endfor -%}
+    <h1> Finished Work</h1>
 
-</ul>
+    <div>
 
-<span>See More</span>
+        <ul id="finishedWorkList">
 
-<h2>Notes</h2>
-<ul>
+            {%- for post in collections.post -%}
+                {% if (loop.index <= 5) %}
+                    <li class="finishedWorkListItems">
+                        <img></img>
+                        <h3>{{ post.data.title }}</h3>
+                    </li>
+                {% endif %}
+            {%- endfor -%}
 
-    {%- for note in collections.note -%}
-        {% if (loop.index <= 5) %}
-            <li>
-                <img></img>
-                <h3><a href={{page.url}}> {{ note.data.title }} </a></h3>
-            </li>
-        {% endif %}
-    {%- endfor -%}
+        </ul>
 
-</ul>
+    </div>
 
-<span>See More</span>
+    <span>See More</span>
 
-<h2>Lists</h2>
-<ul>
+    <div>
+        <h2>Notes</h2>
+        <ul>
 
-    {%- for list in collections.list -%}
-        {% if (loop.index <= 5) %}
-            <li>
-                <img></img>
-                <h3>{{ list.data.title }}</h3>
-            </li>
-        {% endif %}
-    {%- endfor -%}
+            {%- for note in collections.note -%}
+                {% if (loop.index <= 5) %}
+                    <li>
+                        <img></img>
+                        <h3><a href={{page.url}}> {{ note.data.title }} </a></h3>
+                    </li>
+                {% endif %}
+            {%- endfor -%}
 
-</ul>
+        </ul>
 
-<span>See More</span>
+        <span>See More</span>
+    </div>
+
+    <div>
+        <h2>Lists</h2>
+        <ul>
+
+            {%- for list in collections.list -%}
+                {% if (loop.index <= 5) %}
+                    <li>
+                        <img></img>
+                        <h3>{{ list.data.title }}</h3>
+                    </li>
+                {% endif %}
+            {%- endfor -%}
+
+        </ul>
+
+        <span>See More</span>
+    </div>
+</main>
