@@ -1,10 +1,10 @@
 {
-  "name": "bojo",
+  "name": "@Bojo/website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Source code for bojo.xyz",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "rm -rf public && eleventy --serve",
     "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
   },
   "repository": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/Boj0/bojo.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bojo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Boj0/bojo/issues"
@@ -20,5 +20,12 @@
   "homepage": "https://github.com/Boj0/bojo#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.19",
+    "eleventy-plugin-postcss": "^1.0.4",
+    "postcss-import": "^16.1.0",
+    "postcss-minify": "^1.1.0"
   }
 }

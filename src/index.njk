@@ -1,63 +1,23 @@
----
-layout: "base.njk" 
----
+{% extends "base.njk" %}
 
-<main class="homepage">
+{% set mainClass = 'content-grid' %}
 
-    <h1> Finished Work</h1>
+{% block content %}
+<h1><span class="selected">Yo</span>, I'm Bojo.</h1>
 
-    <div>
+<section class="paragraph">
+    <p>Welcome to my corner of the internet!</p>
+    <p>In my spare time I consume media; I read what people think about it and sometimes I write what I think about it. This is where you'll find all my writing. I'm currently working as a site reliability engineer.</p>
+    <p>Other interests include game dev, electronic music production, bass guitar, motion graphics, video editing, pixel art, 3D graphics, and like, a lot more. My interests never end...
+    <p>If you're unsure of where to start, may I suggest gandering at one of my <a href="/writing/lists">lists</a>? Or maybe you'd prefer checking out my <a href="/writing/projects">projects</a>?
+  </section>
 
-        <ul id="finishedWorkList">
+  <section>
+    <h2>Recent Writing</h2>
+    {% for post in collections.post | reverse | limit(4) %}
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
 
-            {%- for post in collections.post -%}
-                {% if (loop.index <= 5) %}
-                    <li class="finishedWorkListItems">
-                        <img></img>
-                        <h3>{{ post.data.title }}</h3>
-                    </li>
-                {% endif %}
-            {%- endfor -%}
 
-        </ul>
-
-    </div>
-
-    <span>See More</span>
-
-    <div>
-        <h2>Notes</h2>
-        <ul>
-
-            {%- for note in collections.note -%}
-                {% if (loop.index <= 5) %}
-                    <li>
-                        <img></img>
-                        <h3><a href={{page.url}}> {{ note.data.title }} </a></h3>
-                    </li>
-                {% endif %}
-            {%- endfor -%}
-
-        </ul>
-
-        <span>See More</span>
-    </div>
-
-    <div>
-        <h2>Lists</h2>
-        <ul>
-
-            {%- for list in collections.list -%}
-                {% if (loop.index <= 5) %}
-                    <li>
-                        <img></img>
-                        <h3>{{ list.data.title }}</h3>
-                    </li>
-                {% endif %}
-            {%- endfor -%}
-
-        </ul>
-
-        <span>See More</span>
-    </div>
-</main>
+</section>
+{% endblock %}
