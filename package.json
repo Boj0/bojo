@@ -4,8 +4,7 @@
   "description": "Source code for bojo.xyz",
   "main": "index.js",
   "scripts": {
-    "start": "rm -rf public && eleventy --serve",
-    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
+    "start": "rm -rf _site && eleventy --serve"
   },
   "repository": {
     "type": "git",
