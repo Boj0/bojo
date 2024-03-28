@@ -1,5 +1,4 @@
 ---
-layout: base.njk
 tags: post
 title: This is a Test
 ---
