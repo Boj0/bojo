@@ -9,7 +9,7 @@
 
 :root {
   --black: #1c1a26;
-  --white: #ffffff;
+  --white: #d9d6d7;
   --grey: #444444;
   --background-color: var(--black);
   --color: var(--white);
@@ -53,8 +53,7 @@ a:visited {
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 1.2em;
 }
 
 ul {
@@ -62,7 +61,8 @@ ul {
   padding: 0;
 }
 
-.selected {
+.selected,
+::selection {
   background-color: var(--accent-color);
   color: var(--background-color);
 }

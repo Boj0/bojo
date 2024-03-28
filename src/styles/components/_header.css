@@ -29,6 +29,6 @@ body > header > div > nav > a {
 
 body > header > div > nav > a:hover {
     color: var(--background-color);
-    background-color: rgb(249,250,251);
+    background-color: var(--color);
     transition: background-color 0.3s;
 }
