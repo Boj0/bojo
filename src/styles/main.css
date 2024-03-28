@@ -1,6 +1,7 @@
 /* Components */
 @import "components/_content-grid.css";
 @import "components/_header.css";
+@import "../../node_modules/normalize.css/normalize.css";
 
 * {
   margin-top: 0;
@@ -40,6 +41,10 @@ header {
   flex-direction: column;
 }
 
+main {
+  font-size: 1.2em;
+}
+
 pre {
   background-color: var(--grey);
   padding: 1rem;
@@ -50,10 +55,6 @@ pre {
 a:link,
 a:visited {
   color: var(--accent-color);
-}
-
-p {
-  font-size: 1.2em;
 }
 
 ul {
