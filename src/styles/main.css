@@ -34,7 +34,6 @@ body {
   transition: background-color 300ms, color 200ms;
 }
 
-
 main,
 header {
   display: flex;
@@ -56,6 +55,11 @@ a:visited {
 p {
   font-size: 1rem;
   line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .selected {

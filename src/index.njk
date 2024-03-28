@@ -14,10 +14,11 @@
 
   <section>
     <h2>Recent Writing</h2>
-    {% for post in collections.post | reverse | limit(4) %}
-        <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-
+    <ul>
+      {% for post in collections.post | reverse | limit(4) %}
+      <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+      {% endfor %}
+    </ul>
 
 </section>
 {% endblock %}

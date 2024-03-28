@@ -1,0 +1,34 @@
+body > header {
+    margin-bottom: 40px;
+}
+
+body > header > div {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+body > header > div > nav > *:first-child  {
+    margin-left: 0;
+}
+
+body > header > div > nav > a {
+    border-radius: .5rem;
+    color: var(--color);
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    box-shadow: 0 1px 3px 0 rgb(227, 143, 251),0 1px 2px 0 rgba(0,0,0,0.06);
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body > header > div > nav > a:hover {
+    color: var(--background-color);
+    background-color: rgb(249,250,251);
+    transition: background-color 0.3s;
+}
