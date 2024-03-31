@@ -1,0 +1,18 @@
+footer {
+    background-color: #343d47;
+    padding: 1.5em 0;
+}
+
+footer nav:first-child > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer a {
+    margin: 0.5em;
+}
+
+footer a:first-of-type {
+    margin-left: 0;
+}
