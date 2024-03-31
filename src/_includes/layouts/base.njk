@@ -20,10 +20,17 @@
         {% endblock %}
       </div>
     </header>
+
     <main {{ ('class="' + mainClass + '"') | safe if mainClass }}>
       {% block content %}
         {{ content | safe }}
       {% endblock %}
     </main>
+
+    <footer class="content-grid">
+      {% block footer %}
+        {{ footer | safe }}
+      {% endblock %}
+    </footer>
   </body>
 </html>
