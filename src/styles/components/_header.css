@@ -14,7 +14,9 @@ body > header > div > nav > *:first-child  {
     margin-left: 0;
 }
 
-body > header > div > nav > a {
+body > header > div > nav > a,
+body > header > div > nav > a:link,
+body > header > div > nav > a:visited {
     border-radius: .5rem;
     color: var(--color);
     font-size: .875rem;
@@ -25,6 +27,7 @@ body > header > div > nav > a {
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
+    text-decoration: none;
 }
 
 body > header > div > nav > a:hover {
